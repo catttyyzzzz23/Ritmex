@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #222;
+    font-family: system-ui, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    background-image: linear-gradient(
+        rgb(48, 48, 48) 13%,
+        rgb(30, 30, 30) 40%,
+        #0c0d11 86%
+    );
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 0 -2px 0 black;
+    box-shadow: 1px 2px 4px rgb(20, 20, 20), 0 4px 12px rgb(10, 10, 10);
+}
+.menu{
+    margin-right: 90px;
+}
+nav {
+    display: flex;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 1ch;
+    position: relative;
+
+    &:not(.active):hover {
+        color: rgba(255, 255, 255, 0.87);
+    }
+
+    &:hover > .icon .subicon {
+        height: 32px;
+        width: 32px;
+        border-radius: 32px;
+        top: -16px;
+        right: -16px;
+        border-color: white;
+    }
+
+    &:not(:first-of-type) {
+        border-left: 1px solid rgb(60, 60, 60);
+    }
+    &:not(:last-of-type) {
+        border-right: 0.1rem solid black;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        padding: 1ch;
+    }
+
+    .icon {
+        margin-left: 0.5ch;
+        position: relative;
+
+    }
+
+    .icon > svg {
+        max-width: 16px;
+    }
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-child {
+    display: none;
+    position: absolute;
+    background-color: rgb(60, 60, 60);
+    min-width: 120px;
+    top: 100%; /* Posiciona o dropdown abaixo do elemento pai */
+    left: 0; /* Alinha o dropdown com a borda esquerda do elemento pai */
+}
+
+.dropdown-child a {
+    color: rgb(255, 255, 255); /* Alterei a cor do texto para branco para melhor visibilidade */
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    color: black;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
+}

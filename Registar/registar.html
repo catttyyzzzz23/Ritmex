@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de registo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../Imagens/logo2.png">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Registo</h2>
+        <form action="registar.php" method="post">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Nome" required>
+            </div>
+            <div class="input-box">
+                <input type="text" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-box">
+                <input type="password" name="confirm_password" placeholder="Confirme a password" required>
+            </div>
+            <div class="policy">
+                <input type="checkbox" name="terms" required>
+                <h3>Aceito os termos e condições</h3>
+            </div>
+            <div class="input-box" style="display: flex; align-items: center;">
+                <input type="radio" id="normal_user" name="user_type" value="normal_user">
+                <label for="normal_user">Utilizador</label>
+                <input type="radio" id="artist" name="user_type" value="artist" style="margin-left: 10px;">
+                <label for="artist">Artista</label>
+            </div>
+            <div class="input-box button">
+                <input type="submit" value="Registar agora">
+            </div>
+            <div class="text">
+                <h3>Já tem conta? <a href="../Login/login.html">Login</a></h3>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
